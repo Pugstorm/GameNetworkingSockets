@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.9)
 
 add_compile_definitions(STEAMNETWORKINGSOCKETS_STANDALONELIB)
-add_compile_definitions(STEAMNETWORKINGSOCKETS_ENABLE_FAKEIP)
 
 # If vcpkg present as submodule, bring in the toolchain
 if( EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake )
