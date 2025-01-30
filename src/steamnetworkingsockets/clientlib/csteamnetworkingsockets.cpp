@@ -2412,6 +2412,13 @@ STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingSockets *SteamNetworkingSockets
 	return s_pSteamNetworkingSockets;
 }
 
+STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingSockets *SteamAPI_SteamGameServerNetworkingSockets_SteamAPI_v012()
+{
+	SteamDatagramErrMsg errMsg;
+	GameNetworkingSockets_Init( nullptr, errMsg );
+	return s_pSteamNetworkingSockets;
+}
+
 STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingUtils *SteamNetworkingUtils_LibV4()
 {
 	static CSteamNetworkingUtils s_utils;

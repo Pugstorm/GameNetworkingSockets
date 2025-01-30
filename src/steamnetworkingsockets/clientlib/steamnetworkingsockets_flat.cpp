@@ -15,6 +15,8 @@
 
 STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingSockets *SteamAPI_SteamNetworkingSockets_SteamAPI_v012()
 {
+	SteamDatagramErrMsg errMsg;
+	GameNetworkingSockets_Init( nullptr, errMsg );
 	return SteamNetworkingSockets();
 }
 STEAMNETWORKINGSOCKETS_INTERFACE HSteamListenSocket SteamAPI_ISteamNetworkingSockets_CreateListenSocketIP( ISteamNetworkingSockets* self, const SteamNetworkingIPAddr & localAddress, int nOptions, const SteamNetworkingConfigValue_t * pOptions )
@@ -315,6 +317,11 @@ STEAMNETWORKINGSOCKETS_INTERFACE ESteamNetworkingConfigValue SteamAPI_ISteamNetw
 {
 	return self->IterateGenericEditableConfigValues( eCurrent,bEnumerateDevVars );
 }
+STEAMNETWORKINGSOCKETS_INTERFACE bool SteamAPI_ISteamNetworkingUtils_IsFakeIPv4( intptr_t self, uint32 nIPv4 )
+{
+	return GetIPv4FakeIPType( nIPv4 ) > k_ESteamNetworkingFakeIPType_NotFake;
+}
+STEAMNETWORKINGSOCKETS_INTERFACE ESteamNetworkingFakeIPType GetIPv4FakeIPType( uint32 nIPv4 ) {return (ESteamNetworkingFakeIPType)0;}
 
 //--- SteamNetworkingIPAddr-------------------------
 
