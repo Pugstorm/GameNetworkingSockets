@@ -13,7 +13,7 @@
 
 //--- ISteamNetworkingSockets-------------------------
 
-STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingSockets *SteamAPI_SteamNetworkingSockets_v009()
+STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingSockets *SteamAPI_SteamNetworkingSockets_SteamAPI_v012()
 {
 	return SteamNetworkingSockets();
 }
@@ -188,7 +188,7 @@ STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_ISteamNetworkingSockets_RunCallba
 
 //--- ISteamNetworkingUtils-------------------------
 
-STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingUtils *SteamAPI_SteamNetworkingUtils_v003()
+STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingUtils *SteamAPI_SteamNetworkingUtils_SteamAPI_v004()
 {
 	return SteamNetworkingUtils();
 }
