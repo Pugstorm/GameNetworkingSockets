@@ -304,7 +304,7 @@ public:
 
 	virtual AppId_t GetAppID();
 
-	void SetAppID( AppId_t nAppID )
+	virtual void SetAppID( AppId_t nAppID ) override
 	{
 		Assert( m_nAppID == 0 || m_nAppID == nAppID );
 		m_nAppID = nAppID;

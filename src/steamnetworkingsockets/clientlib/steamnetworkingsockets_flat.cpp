@@ -323,6 +323,11 @@ STEAMNETWORKINGSOCKETS_INTERFACE bool SteamAPI_ISteamNetworkingUtils_IsFakeIPv4(
 }
 STEAMNETWORKINGSOCKETS_INTERFACE ESteamNetworkingFakeIPType GetIPv4FakeIPType( uint32 nIPv4 ) {return (ESteamNetworkingFakeIPType)0;}
 
+STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_ISteamNetworkingUtils_SetAppID( ISteamNetworkingUtils* self, AppId_t appID )
+{
+	self->SetAppID(appID);
+}
+
 //--- SteamNetworkingIPAddr-------------------------
 
 STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_SteamNetworkingIPAddr_Clear( SteamNetworkingIPAddr* self )

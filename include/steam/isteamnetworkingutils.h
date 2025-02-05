@@ -348,6 +348,11 @@ public:
 	virtual void SteamNetworkingIdentity_ToString( const SteamNetworkingIdentity &identity, char *buf, size_t cbBuf ) = 0;
 	virtual bool SteamNetworkingIdentity_ParseString( SteamNetworkingIdentity *pIdentity, const char *pszStr ) = 0;
 
+
+	/// Set App ID
+	/// App ID isn't set automatically, so providing a function where it can be done in.
+	virtual void SetAppID( AppId_t appID ) = 0;
+
 protected:
 	~ISteamNetworkingUtils(); // Silence some warnings
 };

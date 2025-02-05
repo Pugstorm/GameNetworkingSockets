@@ -96,6 +96,7 @@ STEAMNETWORKINGSOCKETS_INTERFACE const char * SteamAPI_ISteamNetworkingUtils_Get
 STEAMNETWORKINGSOCKETS_INTERFACE ESteamNetworkingConfigValue SteamAPI_ISteamNetworkingUtils_IterateGenericEditableConfigValues( ISteamNetworkingUtils* self, ESteamNetworkingConfigValue eCurrent, bool bEnumerateDevVars );
 STEAMNETWORKINGSOCKETS_INTERFACE bool SteamAPI_ISteamNetworkingUtils_IsFakeIPv4(intptr_t self, uint32 nIPv4 );
 STEAMNETWORKINGSOCKETS_INTERFACE ESteamNetworkingFakeIPType GetIPv4FakeIPType( uint32 nIPv4 );
+STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_ISteamNetworkingUtils_SetAppID( ISteamNetworkingUtils* self, AppId_t appID );
 
 // SteamNetworkingIPAddr
 STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_SteamNetworkingIPAddr_Clear( SteamNetworkingIPAddr* self );
