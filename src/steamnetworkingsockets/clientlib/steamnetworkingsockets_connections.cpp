@@ -1378,8 +1378,12 @@ ESteamNetConnectionEnd CSteamNetworkConnectionBase::RecvCryptoHandshake(
 	m_sCertRemote = msgCert.cert();
 	m_sCryptRemote = msgSessionInfo.info();
 
-	// If they presented a signature, it must be valid
 	const CertAuthScope *pCACertAuthScope = nullptr; 
+/*
+	//This check fails when the Steam client has identified with steam. As we can't and shouldn't stop them from 
+	//identifying with Steam properly, better to force correct flow despite them sending ca signature
+
+	// If they presented a signature, it must be valid
 	if ( msgCert.has_ca_signature() )
 	{
 
@@ -1393,6 +1397,7 @@ ESteamNetConnectionEnd CSteamNetworkConnectionBase::RecvCryptoHandshake(
 		}
 	}
 	else
+*/
 	{
 
 		// Deserialize the cert
