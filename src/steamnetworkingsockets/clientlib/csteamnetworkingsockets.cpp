@@ -2381,7 +2381,6 @@ STEAMNETWORKINGSOCKETS_INTERFACE bool GameNetworkingSockets_Init( const SteamNet
 	// Already initted?
 	if ( s_pSteamNetworkingSockets )
 	{
-		AssertMsg( false, "GameNetworkingSockets_init called multiple times?" );
 		return true;
 	}
 
